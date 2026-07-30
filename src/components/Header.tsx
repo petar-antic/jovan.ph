@@ -67,13 +67,14 @@ export default function Header() {
         </span>
       </button>
 
-      <Button
-        href="#contact"
-        className="hidden lg:inline-flex lg:mt-1"
-        icon={<ArrowUpRightIcon className="size-3.5 stroke-[2.5]" />}
-      >
-        Get in touch
-      </Button>
+      <div className="hidden lg:block lg:mt-1">
+        <Button
+          href="#contact"
+          icon={<ArrowUpRightIcon className="size-3.5 stroke-[2.5]" />}
+        >
+          Get in touch
+        </Button>
+      </div>
 
       <nav
         className={`absolute left-0 right-0 top-full flex flex-col gap-4 bg-white px-5 py-6 text-ink shadow-sm transition-all duration-300 ease-out lg:hidden ${
