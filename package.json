@@ -9,12 +9,15 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.2.0",
+    "motion": "^13.2.0",
     "next": "16.2.9",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-icons": "^5.7.0",
+    "react-use-measure": "^2.1.7"
   },
   "devDependencies": {
+    "@21st-dev/cli": "^1.17.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

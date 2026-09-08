@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jovan Doncic | Photographer",
-  description: "Photography portfolio of Jovan Doncic.",
+  title: "DNC Weedings | Wedding Photography",
+  description:
+    "DNC Weedings — wedding photography that captures your story with clarity and heart.",
 };
 
 export default function RootLayout({
