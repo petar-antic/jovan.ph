@@ -10,7 +10,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative flex min-h-[82vh] flex-col overflow-hidden bg-ink px-5 pb-0 pt-12 text-[#efefef] md:px-[26px] md:pt-16">
+    <footer className="relative flex min-h-[82vh] flex-col overflow-hidden border-t border-white/10 bg-ink px-5 pt-20 text-[#efefef] md:px-[26px] md:pt-24">
       <div className="flex items-start justify-between gap-10">
         <nav className="flex flex-col gap-3">
           {footerLinks.map((link) => (
@@ -75,9 +75,19 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="mt-8 translate-y-[0.16em] whitespace-nowrap text-center text-[clamp(5rem,18vw,16rem)] font-black uppercase leading-[0.7] tracking-[-0.09em]">
-        DNC Weedings
-      </p>
+      <div className="-mx-5 mt-8 overflow-hidden md:-mx-[26px]">
+        <div className="flex w-max animate-footer-marquee will-change-transform hover:[animation-play-state:paused]">
+          {[0, 1].map((copy) => (
+            <p
+              key={copy}
+              aria-hidden={copy === 1}
+              className="translate-y-[0.16em] whitespace-nowrap pr-[0.12em] text-[clamp(6.5rem,23vw,21rem)] font-black uppercase leading-[0.7] tracking-[-0.09em]"
+            >
+              DNC Weedings&nbsp;—&nbsp;
+            </p>
+          ))}
+        </div>
+      </div>
     </footer>
   );
 }

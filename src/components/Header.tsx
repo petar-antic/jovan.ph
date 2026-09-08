@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { FaFacebookF, FaInstagram, FaPinterestP } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 import HeroImageSlider from "@/components/HeroImageSlider";
 
@@ -34,8 +34,8 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="pointer-events-none fixed inset-0 z-50 text-ink">
-      <div className="pointer-events-auto absolute inset-x-0 top-0 z-20 flex items-start justify-between px-5 py-4 md:px-7">
+    <header className="pointer-events-none text-ink">
+      <div className="pointer-events-auto fixed inset-x-0 top-0 z-[60] flex items-start justify-between px-5 py-4 text-white mix-blend-difference md:px-7">
         <a
           href="/"
           className={`text-xl font-black tracking-[-0.08em] transition-opacity duration-300 md:text-2xl ${
@@ -102,12 +102,12 @@ export default function Header() {
               duration: 0.75,
               ease: [0.76, 0, 0.24, 1],
             }}
-            className="pointer-events-auto fixed inset-0 h-dvh bg-[#efefef]"
+            className="pointer-events-auto fixed inset-0 z-50 h-dvh bg-[#efefef]"
           >
             <div className="flex h-full">
               <aside className="relative flex h-full w-full shrink-0 flex-col bg-[#efefef] px-5 py-5 md:w-[23%] md:px-8">
                 <nav
-                  className="absolute left-1/2 top-1/2 flex w-[68%] max-w-sm -translate-x-1/2 -translate-y-1/2 flex-col"
+                  className="absolute left-1/2 top-1/2 flex w-[72%] max-w-sm -translate-x-1/2 -translate-y-1/2 flex-col gap-3"
                   aria-label="Menu navigation"
                 >
                   {navLinks.map((link, index) => (
@@ -120,7 +120,7 @@ export default function Header() {
                         duration: 0.45,
                         delay: 0.25 + index * 0.07,
                       }}
-                      className="border-b border-ink/20 py-3 text-sm font-normal uppercase tracking-normal transition-opacity hover:opacity-50"
+                      className="text-2xl font-normal uppercase tracking-[-0.035em] transition-opacity hover:opacity-50 md:text-3xl"
                       onClick={() => setMenuOpen(false)}
                     >
                       {link.label}
@@ -128,26 +128,45 @@ export default function Header() {
                   ))}
                 </nav>
 
-                <div className="mx-auto mt-auto w-[68%] max-w-sm">
+                <div className="mx-auto mt-auto w-[72%] max-w-sm">
                   <a
                     href="mailto:hello@dncweedings.com"
-                    className="block border-b border-ink/25 pb-3 text-xs"
+                    className="block text-[10px] text-ink/60 transition-colors hover:text-ink"
                   >
                     hello@dncweedings.com
                   </a>
 
-                  <div className="mt-5 flex items-center gap-4">
+                  <form
+                    className="mt-5 flex items-center border-b border-ink/25 pb-2"
+                    onSubmit={(event) => event.preventDefault()}
+                  >
+                    <label htmlFor="menu-newsletter" className="sr-only">
+                      Email for newsletter
+                    </label>
+                    <input
+                      id="menu-newsletter"
+                      type="email"
+                      placeholder="Join our newsletter"
+                      className="min-w-0 flex-1 bg-transparent text-[10px] outline-none placeholder:text-ink/35"
+                    />
+                    <button
+                      type="submit"
+                      className="text-xs text-ink/50 transition-colors hover:text-ink"
+                      aria-label="Subscribe"
+                    >
+                      ↗
+                    </button>
+                  </form>
+
+                  <div className="mt-5 flex items-center gap-4 text-ink/60">
                     <a href="#" aria-label="Instagram">
-                      <FaInstagram className="size-4" />
+                      <FaInstagram className="size-3.5" />
                     </a>
-                    <a href="#" aria-label="Facebook">
-                      <FaFacebookF className="size-3.5" />
+                    <a href="#" aria-label="LinkedIn">
+                      <FaLinkedinIn className="size-3.5" />
                     </a>
                     <a href="#" aria-label="TikTok">
                       <SiTiktok className="size-3.5" />
-                    </a>
-                    <a href="#" aria-label="Pinterest">
-                      <FaPinterestP className="size-3.5" />
                     </a>
                   </div>
                 </div>

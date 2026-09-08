@@ -22,41 +22,39 @@ export default function About() {
           />
         </div>
 
-        <div className="flex flex-col justify-center px-6 py-16 md:px-10 lg:w-[34%] lg:px-12 lg:py-20">
-          <p className="flex items-center gap-2 text-[9px] uppercase tracking-[0.18em] text-white/55">
-            <span className="size-1 bg-[#efefef]" />
-            Behind the lens
-          </p>
-
-          <h2 className="mt-5 max-w-md text-2xl font-normal leading-[1.08] tracking-[-0.04em] md:text-3xl">
-            I photograph the moments that happen between the planned ones.
-          </h2>
-
-          <div className="mt-14 flex max-w-md flex-col gap-8 text-xs leading-relaxed text-white/60 md:text-sm lg:mt-20">
-            <p>
-              Every wedding has its own rhythm. My work is to notice it — the
-              quiet glance, the nervous hands, the laughter that arrives before
-              anyone is ready for the camera.
-            </p>
-            <p>
-              I keep the process calm and unobtrusive, shaping honest moments
-              into photographs that feel contemporary today and deeply personal
-              decades from now.
+        <div className="flex flex-col border-t border-white/10 px-6 py-16 md:px-10 lg:w-[48%] lg:border-l lg:border-t-0 lg:px-12 lg:py-16">
+          <div className="flex items-start justify-end">
+            <p className="flex items-center gap-2 text-[9px] uppercase tracking-[0.18em] text-white/45">
+              <span className="size-1 bg-[#efefef]" />
+              Behind the lens
             </p>
           </div>
 
-          <a
-            href="#contact"
-            className="mt-12 w-fit border-b border-white/60 pb-1 text-[10px] uppercase tracking-[0.16em] transition-opacity hover:opacity-50"
-          >
-            Tell me your story
-          </a>
-        </div>
-
-        <div className="flex min-h-48 items-center justify-center overflow-hidden border-t border-white/10 lg:h-full lg:min-h-0 lg:w-[14%] lg:border-l lg:border-t-0">
-          <p className="whitespace-nowrap text-[clamp(6rem,14vw,12rem)] font-black uppercase leading-none tracking-[-0.09em] lg:rotate-90">
-            About
+          <p className="my-auto max-w-xl py-20 text-3xl font-normal leading-[1.04] tracking-[-0.05em] md:text-5xl">
+            We photograph the moments that happen between the planned ones.
           </p>
+
+          <div>
+            <div className="grid max-w-2xl gap-8 border-t border-white/20 pt-6 text-xs leading-relaxed text-white/55 md:grid-cols-2">
+              <p>
+                Every wedding has its own rhythm. We notice the quiet glance,
+                the nervous hands, and the laughter that arrives before anyone
+                is ready for the camera.
+              </p>
+              <p>
+                Our process stays calm and unobtrusive, shaping honest moments
+                into photographs that feel contemporary today and deeply
+                personal decades from now.
+              </p>
+            </div>
+
+            <a
+              href="#contact"
+              className="mt-10 inline-flex border-b border-white/40 pb-2 text-[10px] uppercase tracking-[0.14em] transition-opacity hover:opacity-50"
+            >
+              Tell us your story ↗
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -38,9 +38,9 @@ export default function Process() {
   return (
     <section
       id="works"
-      className="min-h-dvh bg-[#efefef] px-5 py-20 text-ink md:px-[26px] md:py-24"
+      className="min-h-dvh bg-[#efefef] px-5 py-24 text-ink md:px-[26px] md:py-32"
     >
-      <div className="flex min-h-[calc(100dvh-10rem)] flex-col gap-14 lg:flex-row lg:items-end lg:gap-20">
+      <div className="flex min-h-[calc(100dvh-12rem)] flex-col gap-16 md:min-h-[calc(100dvh-16rem)] lg:flex-row lg:items-end lg:gap-20">
         <div className="flex lg:w-[36%] lg:flex-col lg:justify-between">
           <div>
             <p className="flex items-center gap-2 text-[9px] uppercase tracking-[0.16em]">

@@ -23,16 +23,25 @@ export default function Hero({ header }: HeroProps) {
     <section className="relative h-dvh w-full overflow-hidden bg-[#efefef] text-ink">
       {header}
 
-      <div className="flex h-full flex-col px-5 pb-6 pt-20 md:px-[26px] md:pt-20">
-        <h1 className="whitespace-nowrap text-[clamp(3.1rem,13vw,12rem)] font-medium leading-[0.78] tracking-[-0.075em] animate-fade-up">
-          DNC Weedings
-        </h1>
+      <div className="flex h-full flex-col px-5 pt-20 md:px-[26px] md:pt-20">
+        <div className="relative mt-auto">
+          <h1 className="animate-fade-up flex items-end gap-[0.06em] whitespace-nowrap text-[clamp(3rem,12.4vw,11.5rem)] leading-[0.7]">
+            <span className="text-[1.18em] font-black tracking-[-0.095em]">
+              DNC
+            </span>
+            <span
+              className={`${signatureFont.className} inline-block translate-y-[0.03em] text-[1.04em] font-normal tracking-[-0.045em]`}
+            >
+              Weedings
+            </span>
+          </h1>
 
-        <div className="mt-5 text-[9px] leading-relaxed tracking-[-0.01em] text-ink/60 md:mt-6 md:text-xs">
-          <p>Wedding photographers from Serbia.</p>
+          <p className="absolute bottom-full left-0 mb-4 whitespace-nowrap text-left text-[9px] leading-relaxed tracking-[-0.01em] text-ink/60 md:text-xs">
+            Wedding photographers from Serbia.
+          </p>
         </div>
 
-        <div className="mt-auto flex h-[58vh] min-h-0 shrink-0 items-end gap-2 md:gap-3">
+        <div className="flex h-[58vh] min-h-0 shrink-0 items-end gap-2 md:gap-3">
           {imageFrames.map((frame, index) => (
             <div
               key={frame.dimensions}
