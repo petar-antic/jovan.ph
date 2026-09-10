@@ -211,13 +211,21 @@ export default function Header() {
             </AnimatePresence>
           </motion.div>
 
-          <button
+          <motion.button
             type="button"
             className="relative -mr-0.5 flex size-6 shrink-0 items-center justify-center md:hidden"
             aria-label={t("openMenu")}
             aria-controls="fullscreen-menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(true)}
+            initial="hidden"
+            animate={menuOpen ? "hidden" : "show"}
+            variants={fadeUp}
+            transition={{
+              duration: 0.5,
+              delay: 0.18,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <span className="sr-only">{t("openMenu")}</span>
             <span className="relative block h-[12px] w-4">
@@ -225,7 +233,7 @@ export default function Header() {
               <span className="absolute left-0 top-[5.5px] block h-px w-full bg-current" />
               <span className="absolute bottom-0 left-0 block h-px w-full bg-current" />
             </span>
-          </button>
+          </motion.button>
         </div>
       </div>
 
