@@ -11,14 +11,12 @@ export const messages = {
     closeMenu: "Zatvori meni",
     momentsInMotion: "Trenuci u pokretu",
     heroText: "Trenuci koji ostaju zauvek",
-    services: "Services",
-    viewMore: "View more",
+    services: "Usluge",
+    viewMore: "Pogledaj više",
     serviceWeddings: "Venčanja",
     serviceDebut: "Rođendan punoletstvo",
     serviceFirstBirthdays: "Prvi rođendani",
-    serviceCorporate: "Corpo events",
-    serviceCorporateText:
-      "We strive to create a harmonious combination of beauty, comfort and cosiness to make this day unforgettable and leave vivid impressions for a lifetime.",
+    serviceCorporate: "Korpo eventi",
   },
   en: {
     contact: "Contact",
@@ -36,8 +34,6 @@ export const messages = {
     serviceDebut: "Debut birthday",
     serviceFirstBirthdays: "First birthdays",
     serviceCorporate: "Corporate events",
-    serviceCorporateText:
-      "We strive to create a harmonious combination of beauty, comfort and cosiness to make this day unforgettable and leave vivid impressions for a lifetime.",
   },
 } as const;
 
