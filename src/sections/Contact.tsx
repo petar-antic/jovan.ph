@@ -18,7 +18,7 @@ export default function Contact() {
       />
       <div className="absolute inset-0 bg-ink/25" />
 
-      <div className="relative z-10 w-full max-w-2xl bg-[#efefef] p-5 text-ink md:p-6">
+      <div className="relative z-10 w-full max-w-2xl bg-background p-5 text-ink md:p-6">
         <div className="flex items-start justify-between gap-8">
           <p className="flex items-center gap-3 text-[9px] uppercase tracking-[0.16em]">
             <span className="size-2 bg-ink" />
@@ -87,7 +87,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="h-10 bg-ink px-6 text-[9px] uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-80 md:col-start-2 md:justify-self-end"
+            className="h-10 bg-ink px-6 text-[9px] uppercase tracking-[0.14em] text-background transition-opacity hover:opacity-80 md:col-start-2 md:justify-self-end"
           >
             Send inquiry
           </button>

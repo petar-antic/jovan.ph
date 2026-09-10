@@ -40,7 +40,7 @@ const rightSlides: Slide[] = [
   {
     type: "image",
     src: "/photos/JovanPh-509.jpg",
-    alt: "Wedding moment photographed by DNC Weedings",
+    alt: "Wedding moment photographed by DNC Weddings",
     height: "h-64 md:h-96",
   },
   {
@@ -80,7 +80,7 @@ function SlideCard({ slide }: { slide: Slide }) {
 
 export default function HeroImageSlider() {
   return (
-    <div className="relative flex h-full w-full justify-center gap-3 overflow-hidden bg-[#efefef] px-3 md:gap-5 md:px-8">
+    <div className="relative flex h-full w-full justify-center gap-3 overflow-hidden bg-background px-3 md:gap-5 md:px-8">
       <InfiniteSlider
         direction="vertical"
         speed={35}
@@ -106,8 +106,8 @@ export default function HeroImageSlider() {
         ))}
       </InfiniteSlider>
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#efefef] to-transparent md:h-28" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#efefef] to-transparent md:h-28" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-background to-transparent md:h-28" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background to-transparent md:h-28" />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f2f2f0;
   --foreground: #141414;
   --ink: #141414;
   --accent: #6b5ce7;
@@ -13,7 +13,8 @@
   --color-ink: var(--ink);
   --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-libre-bodoni);
+  --font-mono: var(--font-geist-sans);
   --animate-fade-up: fade-up 0.8s ease-out both;
   --animate-fade-in: fade-in 0.7s ease-out both;
   --animate-frame-reveal: frame-reveal 0.9s
@@ -64,6 +65,11 @@
   .animate-footer-marquee {
     animation-play-state: paused;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {

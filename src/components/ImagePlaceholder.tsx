@@ -9,13 +9,13 @@ export default function ImagePlaceholder({
 }: ImagePlaceholderProps) {
   return (
     <div
-      className={`flex items-center justify-center bg-ink text-white ${className}`}
+      className={`flex items-center justify-center bg-ink text-background ${className}`}
     >
       <div className="flex flex-col items-center gap-3">
-        <span className="border border-dashed border-white/30 px-4 py-3 text-xs tracking-wide text-white/50">
+        <span className="border border-dashed border-background/30 px-4 py-3 text-xs tracking-wide text-background/50">
           Attach image
         </span>
-        <span className="text-[9px] tracking-[0.08em] text-white/35">
+        <span className="text-[9px] tracking-[0.08em] text-background/35">
           {dimensions}
         </span>
       </div>
