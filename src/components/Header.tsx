@@ -94,7 +94,11 @@ export default function Header() {
 
   return (
     <header className="pointer-events-none text-ink">
-      <div className="pointer-events-auto fixed inset-x-0 top-0 z-[60] grid grid-cols-[1fr_auto_1fr] items-center px-5 py-4 text-background mix-blend-difference md:px-8 lg:px-10">
+      <div
+        className={`fixed inset-x-0 top-0 z-[60] grid grid-cols-[1fr_auto_1fr] items-center px-5 py-4 text-background mix-blend-difference md:px-8 lg:px-10 ${
+          menuOpen ? "pointer-events-none" : "pointer-events-auto"
+        }`}
+      >
         <motion.a
           href="/"
           initial="hidden"
@@ -134,26 +138,10 @@ export default function Header() {
         </nav>
 
         <div
-          className={`flex items-center justify-self-end gap-5 ${
+          className={`col-start-3 flex items-center justify-self-end gap-4 ${
             menuOpen ? "pointer-events-none opacity-0" : ""
           }`}
         >
-          <button
-            type="button"
-            className="relative flex size-6 items-center justify-end md:hidden"
-            aria-label={t("openMenu")}
-            aria-controls="fullscreen-menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen(true)}
-          >
-            <span className="sr-only">{t("openMenu")}</span>
-            <span className="relative block h-[12px] w-4">
-              <span className="absolute left-0 top-0 block h-px w-full bg-current" />
-              <span className="absolute left-0 top-[5.5px] block h-px w-full bg-current" />
-              <span className="absolute bottom-0 left-0 block h-px w-full bg-current" />
-            </span>
-          </button>
-
           <motion.div
             ref={langRef}
             className="relative"
@@ -222,6 +210,22 @@ export default function Header() {
               ) : null}
             </AnimatePresence>
           </motion.div>
+
+          <button
+            type="button"
+            className="relative -mr-0.5 flex size-6 shrink-0 items-center justify-center md:hidden"
+            aria-label={t("openMenu")}
+            aria-controls="fullscreen-menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(true)}
+          >
+            <span className="sr-only">{t("openMenu")}</span>
+            <span className="relative block h-[12px] w-4">
+              <span className="absolute left-0 top-0 block h-px w-full bg-current" />
+              <span className="absolute left-0 top-[5.5px] block h-px w-full bg-current" />
+              <span className="absolute bottom-0 left-0 block h-px w-full bg-current" />
+            </span>
+          </button>
         </div>
       </div>
 
@@ -239,16 +243,20 @@ export default function Header() {
               duration: 0.75,
               ease: [0.76, 0, 0.24, 1],
             }}
-            className="pointer-events-auto fixed inset-0 z-50 h-dvh bg-background"
+            className="pointer-events-auto fixed inset-0 z-[70] h-dvh bg-background"
           >
             <div className="flex h-full">
-              <aside className="relative flex h-full w-full shrink-0 flex-col bg-background px-5 py-5 md:w-[23%] md:px-8">
+              <aside className="relative flex h-full w-full shrink-0 flex-col bg-background px-5 py-5 text-ink md:w-[23%] md:px-8">
                 <button
                   type="button"
-                  className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.14em]"
+                  className="absolute right-5 top-5 z-10 flex size-8 items-center justify-center text-ink"
+                  aria-label={t("closeMenu")}
                   onClick={() => setMenuOpen(false)}
                 >
-                  {t("closeMenu")}
+                  <span className="relative block size-4" aria-hidden>
+                    <span className="absolute left-0 top-1/2 block h-px w-full -translate-y-1/2 rotate-45 bg-current" />
+                    <span className="absolute left-0 top-1/2 block h-px w-full -translate-y-1/2 -rotate-45 bg-current" />
+                  </span>
                 </button>
 
                 <nav
@@ -265,7 +273,7 @@ export default function Header() {
                         duration: 0.45,
                         delay: 0.25 + index * 0.07,
                       }}
-                      className="text-2xl font-normal uppercase tracking-[-0.035em] transition-opacity hover:opacity-50 md:text-3xl"
+                      className="text-2xl font-normal uppercase tracking-[-0.035em] text-ink transition-opacity hover:opacity-50 md:text-3xl"
                       onClick={(event) => scrollToSection(event, link.href)}
                     >
                       {link.label}
@@ -273,15 +281,15 @@ export default function Header() {
                   ))}
                 </nav>
 
-                <div className="mx-auto mt-auto w-[72%] max-w-sm">
+                <div className="mt-auto flex w-full flex-col items-center pb-2 text-center">
                   <a
                     href="mailto:hello@dncweedings.com"
-                    className="block text-[10px] text-ink/60 transition-colors hover:text-ink"
+                    className="block text-[10px] text-ink transition-opacity hover:opacity-60"
                   >
                     hello@dncweedings.com
                   </a>
 
-                  <div className="mt-5 flex items-center gap-5 text-ink/60">
+                  <div className="mt-5 flex items-center justify-center gap-5 text-ink">
                     <a href="#" aria-label="Instagram">
                       <FaInstagram className="size-5" />
                     </a>
